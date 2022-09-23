@@ -32,8 +32,8 @@ public class MyPrinterTest
 		assertEquals(
 				"The output file differs from the expected one: src/test/resources/htmltests/output1.html!",
 				FileUtils.readFileToString(
-						getFileFromResource("htmltests/output1.html"), "utf-8"),
-				output);
+						getFileFromResource("htmltests/output1.html"), "utf-8").replace("\r", "").trim(),
+				output.replace("\r", "").trim());		
 	}
 
 	@Test
@@ -45,8 +45,8 @@ public class MyPrinterTest
 		assertEquals(
 				"The output file differs from the expected one: src/test/resources/htmltests/output2.html!",
 				FileUtils.readFileToString(
-						getFileFromResource("htmltests/output2.html"), "utf-8"),
-				output);
+						getFileFromResource("htmltests/output2.html"), "utf-8").replace("\r", "").trim(),
+				output.replace("\r", "").trim());
 	}
 
 	@Test
@@ -58,8 +58,8 @@ public class MyPrinterTest
 		assertEquals(
 				"The output file differs from the expected one: src/test/resources/htmltests/output3.html!",
 				FileUtils.readFileToString(
-						getFileFromResource("htmltests/output3.html"), "utf-8"),
-				output);
+						getFileFromResource("htmltests/output3.html"), "utf-8").replace("\r", "").trim(),
+				output.replace("\r", "").trim());
 	}
 
 	/**
